@@ -1,4 +1,3 @@
-# mongoose_Crash_Course
 
 # Mongoose Crash Course - Beginner Through Advanced
 ### https://www.youtube.com/watch?v=DZBGEVgL2eE
