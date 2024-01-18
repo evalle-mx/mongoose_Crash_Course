@@ -5,9 +5,19 @@
 
 ## initialize node project
 $ npm init -y
+
 ## install project dependency
-$ npm i mongoose
+$ npm i mongoose dotenv
 
 ## install develop-env dependency (nodemon will refresh each change and re-run, dotenv to read environment V's)
 $ npm i --save-dev nodemon
-$ npm i dotenv
+
+## create/edit env file
+$ touch .env
+
+## the file should contains:
+ATLAS_URL=mongodb+srv://<user>:<pass>@<cluster.name>.mongodb.net/testdb?retryWrites=true&w=majority
+
+
+##  RUN
+$ nodemon script.js

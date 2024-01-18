@@ -23,6 +23,9 @@ db.on('error', (e) => {  //DO it everytime detects an error 7888989
     console.log( e );
 })
 
+// ## FINDALL (initial testing)
+findAll();
+
 
 // ## CREATE
 //storeUser()
@@ -30,7 +33,13 @@ db.on('error', (e) => {  //DO it everytime detects an error 7888989
 
 // ## FIND
 // findElem();
-findElem2();
+// findElem2();
+
+async function findAll(){
+    const users = await User.find();
+    console.log(users);
+    console.log(`  >>  ${users.length} users on collection: user << `);
+}
 
 async function findElem2(){
     /*  Testing extended functionality (methods, statics, query) */
@@ -48,8 +57,8 @@ async function findElem2(){
 
     const user = await User.findOne({email: {$exists:true}});
     console.log(user);
-    console.log(user.namedEmail);
-    await user.save()
+    //console.log(user.namedEmail);
+    // await user.save()
 
 }
 
