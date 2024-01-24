@@ -72,4 +72,5 @@ userSchema.post('save', function (doc, next) {
     doc.sayHi()
     next()
 })
-module.exports = mongoose.model('User', userSchema ) 
+// module.exports = mongoose.model('User', userSchema ) 
+module.exports = mongoose.model('Crash-user', userSchema ) 

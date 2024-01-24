@@ -24,12 +24,12 @@ db.on('error', (e) => {  //DO it everytime detects an error 7888989
 })
 
 // ## FINDALL (initial testing)
-findAll();
+// findAll();
 
 
 // ## CREATE
-//storeUser()
-// storeUser2()
+// storeUser()
+storeUser2()
 
 // ## FIND
 // findElem();
@@ -88,7 +88,7 @@ async function storeUser2(){
         const user = await User.create({
             fullName: "Kyle",
             email: 'TEST@mail.com',
-            age: 17 ,
+            age: 19 ,
             hobbies: ["Weight Lifting", "Bowling"],
             address: {street:"Main St "}
         })
@@ -107,7 +107,7 @@ async function storeUser(){
     const user = new User({fullName:'Kyle', age: 31 })
     await user.save().then( () => console.log('User saved') ) // */
     // * Method 2:
-    const user = await User.create({fullName:'Kyle', age: 32 })// */
+    const user = await User.create({fullName:'Kyle', age: 32, email:"test@mail.com" })// */
     console.log(`user: ${user}`);
 
     // Update
